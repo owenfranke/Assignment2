@@ -1,0 +1,44 @@
+
+*** These modified files were found in JOE when it aborted on Thu Apr 16 10:30:09 2020
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+Makefile
+Makefile
+Makefile
+Makefile
+Makefile
+/home/owen/eclipse-workspace/Assignment2/.git/MERGE_MSG
+.profile
+test1
+Test1
+Test1.txt
+help
+
+*** File '* Startup Log *'
+Processing '/etc/joe/joerc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/joerc
+
+*** These modified files were found in JOE when it aborted on Thu Apr 16 10:43:45 2020
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+Makefile
+Makefile
+/home/owen/eclipse-workspace/Assignment2/.git/MERGE_MSG
+.profile
+test1
+Test1
+Test1.txt
+Makefile
+
+Makefile
+Makefile
+
+*** File '* Startup Log *'
+Processing '/etc/joe/joerc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/joerc

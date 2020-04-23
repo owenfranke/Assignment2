@@ -10,7 +10,7 @@ public class LSAVLTree {
 	
 	/** Print all of the areas in the textfile */
 	public void printAllAreas() throws FileNotFoundException {
-		BinarySearchTree<LSBSTData> data = new LSBSTData(null,null).getData();
+		AVLTree<LSAVLData> data = new LSAVLData(null,null).getData();
 		
 		data.inOrder();
 		
@@ -18,10 +18,10 @@ public class LSAVLTree {
 	/** Prints specified areas */
 	public void printAreas(String stage, String day, String startTime) throws FileNotFoundException {
 		String key = stage+"_"+day+"_"+startTime;
-		LSBSTData target = new LSBSTData(key,null);
-		BinarySearchTree<LSBSTData> d = new LSBSTData(null,null).getData();
+		LSAVLData target = new LSAVLData(key,null);
+		AVLTree<LSAVLData> d = new LSAVLData(null,null).getData();
 		
-		BinaryTreeNode<LSBSTData> fin = d.find(target);
+		BinaryTreeNode<LSAVLData> fin = d.find(target);
 		target.getData();
 		target.IncreaseCount();
 		try {

@@ -28,7 +28,7 @@ public class LSBSTData implements Comparable<LSBSTData>{
 
 		BinarySearchTree<LSBSTData> data = new BinarySearchTree<LSBSTData>();
 		File f = new File(
-				"/home/owen/eclipse-workspace/Assignment1/src/Load_Shedding_All_Areas_Schedule_and_Map.clean.final.txt");
+				"Load_Shedding_All_Areas_Schedule_and_Map.clean.final.txt");
 		Scanner file = new Scanner(f);
 
 		int i = 0;

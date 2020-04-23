@@ -3,14 +3,14 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-/** Data class for Load Shedding Binary Search Tree
+/** Data class for Load Shedding AVL Tree
 * @author Owen Franke
 * @author owenfranke123@gmail.com
 * @version final
 * @since February
 */
 
-public class LSBSTData implements Comparable<LSBSTData>{
+public class LSAVLData implements Comparable<LSAVLData>{
 	private Integer opCount = 0;
 	private Integer opCountInsert =0;
 	/** @param key Used to store the stage, date and time */
@@ -18,17 +18,17 @@ public class LSBSTData implements Comparable<LSBSTData>{
 	/** @param area Used to store the areas */
 	private String area;
 
-	public LSBSTData(String key, String area) {
+	public LSAVLData(String key, String area) {
 		this.key = key;
 		this.area = area;
 	}
 	/** Gets the data from the textfile 
 	 * @ return A LSData array object storing data*/
-	public BinarySearchTree<LSBSTData> getData() throws FileNotFoundException {
+	public AVLTree<LSAVLData> getData() throws FileNotFoundException {
 
-		BinarySearchTree<LSBSTData> data = new BinarySearchTree<LSBSTData>();
+		AVLTree<LSAVLData> data = new AVLTree<LSAVLData>();
 		File f = new File(
-				"/home/owen/eclipse-workspace/Assignment1/src/Load_Shedding_All_Areas_Schedule_and_Map.clean.final.txt");
+				"/home/owen/eclipse-workspace/Assignment2/src/Load_Shedding_All_Areas_Schedule_and_Map.clean.final.txt");
 		Scanner file = new Scanner(f);
 
 		int i = 0;
@@ -39,7 +39,8 @@ public class LSBSTData implements Comparable<LSBSTData>{
 			int p = line.indexOf(" ");
 			String area = line.substring(p);
 			String key = line.substring(0, p);
-			data.insert(new LSBSTData(key, area));
+			data.insert(new LSAVLData(key, area));
+			
 			IncreaseCountInsert();
 			i++;
 		}
@@ -52,7 +53,7 @@ public class LSBSTData implements Comparable<LSBSTData>{
 
 	/** Overides compareTo
 	 * @return value of 0/-1/1 */
-	public int compareTo(LSBSTData obj) {
+	public int compareTo(LSAVLData obj) {
 		if (obj.getKey().equals(this.getKey()))	{
 			return 0;
 		} else if (obj.getKey().compareTo(this.getKey())>0) {
@@ -78,7 +79,7 @@ public class LSBSTData implements Comparable<LSBSTData>{
 	
 	}
 	public void writeOperations() throws FileNotFoundException{
-		PrintWriter write = new PrintWriter("Binary Operation Count.txt");
+		PrintWriter write = new PrintWriter("AVL Operation Count.txt");
 		Integer total = opCount+opCountInsert;
 				write.println("Find Operations: "+opCount);			//Uncomment
 				write.println("Insert Operations: "+opCountInsert);

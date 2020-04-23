@@ -23,5 +23,5 @@ default: $(CLASS_FILES)
 clean:
 	rm $(BINDIR)/*.class
 run:
-	@java -cp bin LSBSTApp > bin/Output/outputBinary.txt
+	@java -cp bin LSBSTTree > bin/Output/outputBinary.txt
 	@java -cp bin LSAVLApp > bin/Output/outputAVL.txt
