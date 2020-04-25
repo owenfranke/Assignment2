@@ -1,0 +1,7 @@
+file = open("AVL - Operations Using Tests", "r")
+lines = file.readlines()
+sum=0
+for x in range(0,len(lines)):
+    
+    sum+=int(lines[x])
+print(sum/len(lines))
